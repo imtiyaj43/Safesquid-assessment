@@ -12,8 +12,6 @@ This script creates a **Monitoring System Resources for a Proxy Server** using B
 - Active process summary
 - Service health monitoring
 
----
-
 ## ⚙️ Requirements
 
 Ensure the following packages are installed before running the script:
@@ -84,3 +82,8 @@ Service status (sshd, nginx, apache2, iptables)
 
 ## Notes
 ```Default network interface: ens160 (update if needed).```
+
+
+---
+
+# Set 2: Script for Automating Security Audits and Server Hardening on Linux Servers

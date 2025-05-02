@@ -37,12 +37,50 @@ chmod +x master-script.sh
 ```
 
 ### Run specific sections only:
+
+## Run Individual Sections
+### CPU & Memory:
 ```
-./master-script.sh -cpu       # CPU and Memory
-./master-script.sh -network   # Network Monitoring
-./master-script.sh -disk      # Disk Usage
-./master-script.sh -load      # System Load Average
-./master-script.sh -memory    # RAM and Swap
-./master-script.sh -process   # Top Processes
-./master-script.sh -services  # Service Monitoring
+./master-script.sh -cpu
 ```
+### Network Monitoring:
+```
+./master-script.sh -network
+```
+### Disk Usage:
+```
+./master-script.sh -disk
+```
+### System Load:
+```
+./master-script.sh -load
+```
+### Memory Info:
+```
+./master-script.sh -memory
+```
+### Process Monitoring:
+```
+./master-script.sh -process
+```
+### Service Status:
+```
+./master-script.sh -services
+```
+## ⚙️ Script Features
+Displays top 10 apps by CPU and memory usage
+
+Shows active network connections, packet drops, traffic stats
+
+Disk usage with alert on >80%
+
+System load and CPU breakdown
+
+Memory + swap usage
+
+Active processes + top consumers
+
+Service status (sshd, nginx, apache2, iptables)
+
+## Notes
+```Default network interface: ens160 (update if needed).```

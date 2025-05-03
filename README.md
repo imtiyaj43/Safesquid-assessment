@@ -135,7 +135,7 @@ The script performs the following security checks:
    - Ensure automatic updates are enabled
 
 9. **Custom Security Checks**
-   - Easily extendable with custom checks using config files (coming soon)
+   - Easily extendable with custom checks using config files
 
 10. **Reporting**
    - Generates a clean summary report in `security_audit_report.txt`

@@ -87,3 +87,74 @@ Service status (sshd, nginx, apache2, iptables)
 ---
 
 # Set 2: Script for Automating Security Audits and Server Hardening on Linux Servers
+
+# Linux Security Audit & Hardening Script
+
+This project contains a Bash script that automates the security auditing and hardening of Linux servers. It performs various checks to identify potential vulnerabilities and implements recommended hardening measures to improve the security posture of your system.
+
+## 📌 Features
+
+The script performs the following security checks:
+
+1. **User and Group Audits**
+   - List all users and groups
+   - Detect users with UID 0 (root privileges)
+   - Identify users with empty or weak passwords
+
+2. **File and Directory Permissions**
+   - Scan for world-writable files
+   - Detect files with SUID/SGID bits
+   - Check for `.ssh` directories and validate secure permissions
+
+3. **Service Audits**
+   - List all running services
+   - Ensure critical services (like SSH) are running securely
+   - Check for services listening on non-standard ports
+
+4. **Firewall & Network Security**
+   - Check firewall (ufw or iptables) status
+   - List open ports and associated services
+   - Detect insecure network settings (e.g., IP forwarding)
+
+5. **IP Address & Configuration**
+   - Show all IP addresses (public and private)
+   - Highlight exposure of sensitive services to public IPs
+
+6. **Security Updates**
+   - Check for pending security updates
+   - Ensure the system is receiving regular security patches
+
+7. **Log Monitoring**
+   - Analyze recent SSH login attempts
+   - Highlight any suspicious login patterns
+
+8. **Server Hardening**
+   - Verify SSH configuration (disable root login & password auth)
+   - Check IPv6 status and disable if unused
+   - Check if GRUB bootloader is password-protected
+   - Ensure automatic updates are enabled
+
+9. **Custom Security Checks**
+   - Easily extendable with custom checks using config files (coming soon)
+
+10. **Reporting**
+   - Generates a clean summary report in `security_audit_report.txt`
+   - Can be extended to send email alerts if needed
+
+---
+
+## ⚙️ How to Use
+
+### 🧪 Run the Script:
+
+```
+chmod +x security_audit.sh
+sudo ./security_audit.sh
+```
+
+## 📄Output:
+All results will be stored in a file named:
+```
+security_audit_report.txt
+```
+You can open the file to view the full audit summary.
